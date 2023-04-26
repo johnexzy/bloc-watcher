@@ -1,6 +1,6 @@
 # Wallet Watcher
 
-This is abstract code to be integrated in the wallet wise app
+This is an abstract code to be integrated in the wallet wise app
 
 ## get started
 
