@@ -40,7 +40,7 @@ export default class MainIndexer {
       console.log("Started Watcher on " + network);
 
       // Token Bloc Receiver
-      await tokenContract.on("Transfer", async (from, to, value, trx) => {
+       tokenContract.on("Transfer", async (from, to, value, trx) => {
         if (
           this.watchList.find((a) => a === from) ||
           this.watchList.find((a) => a === to)

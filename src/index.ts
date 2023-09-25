@@ -7,6 +7,6 @@ dotenv.config();
   new MainIndexer({
     network: ['mainnet', 'goerli'],
     watchList,
-    webHookUrl: 'https://87f1-197-210-79-154.ngrok.io/webhook'
+    webHookUrl: 'https://bloc-reciever.onrender.com/webhook'
   }).init()
 })();
