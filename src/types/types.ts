@@ -62,5 +62,6 @@ export type trxResponse = {
   transactionType: string;
   network: string;
   chainId: number;
+  text?: string;
   contractAddress: null | string;
 };

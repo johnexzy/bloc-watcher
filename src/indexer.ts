@@ -51,6 +51,7 @@ export default class MainIndexer {
             value: Number(utils.formatUnits(value, 6)),
             transactionHash: trx.transactionHash,
             transactionType: "Token",
+            text: "Token Transaction",
             network: network,
             chainId: NetworkUtils.getChainId(network),
             contractAddress: trx.address,
@@ -83,6 +84,7 @@ export default class MainIndexer {
               network: network,
               chainId: NetworkUtils.getChainId(network),
               contractAddress: null,
+              text: "Native Transfer"
             };
             sendWebHook(data, this.webhookUrl);
           });
