@@ -53,15 +53,34 @@ export abstract class NetworkUtilsType {
   static getNetwork: (network: string) => NetworkType | undefined;
 }
 
-export type networkName = "mainnet" | "goerli";
+export type networkName = "mainnet" | "goerli" | "bsc" | "polygon";
 export type trxResponse = {
   from: string;
   to: string;
   value: number;
   transactionHash: string;
-  transactionType: string;
+  transactionType: 'token' | 'native';
   network: string;
   chainId: number;
   text?: string;
   contractAddress: null | string;
+  meta: {
+    token_name?: string;
+    token_symbol?: string;
+    blockchain: string;
+    blockchain_symbol?: string;
+  }
 };
+
+export type IndexerCfig =   {
+  tokens: {
+    address: string;
+    name?: string;
+    symbol?: string;
+    watchList: string[];
+  }[];
+  native: string[];
+};
+export interface WalletCfig {
+  [index: string]: IndexerCfig
+}

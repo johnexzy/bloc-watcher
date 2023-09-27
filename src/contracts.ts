@@ -9,8 +9,8 @@ export default class Contracts extends Provider {
     super(network)
     // this.wallet = CreateWallet.initializeNewWallet()
   }
-  public async tokenContract() {
-    const contract = new Contract(this.getUSDCAddress(), usdcAbi, this.provider)
+  public tokenContract(contractAddress: string): Contract{
+    const contract = new Contract(contractAddress, usdcAbi, this.provider)
     return contract
   }
 }

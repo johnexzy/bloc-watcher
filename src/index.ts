@@ -5,7 +5,7 @@ dotenv.config();
 
 (async () => {
   new MainIndexer({
-    network: ['mainnet', 'goerli'],
+    networks: ['mainnet', 'goerli'],
     watchList,
     webHookUrl: 'https://bloc-reciever.onrender.com/webhook'
   }).init()

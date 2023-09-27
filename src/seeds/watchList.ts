@@ -1,4 +1,6 @@
-export default [
+import { WalletCfig } from "types/types";
+
+const watchList = [
   "0x638462aA0033B71CB27Fbb8eA645057127AD559e",
   "0xf7F8DCf8962872421373FF5cf2C4bB06357b7133",
   "0x27899fface558bde9f284ba5c8c91ec79ee60fd6",
@@ -16,3 +18,28 @@ export default [
   "0xAFBa0bE1319c20c499507d18BEBF693E23dEb5F1",
   "0x95254aadAf215a98d58C994CBc3Cc22dfc9dcB25",
 ];
+
+export default {
+  mainnet: {
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        name: "USD Coin",
+        symbol: "USD",
+        watchList: watchList,
+      },
+    ],
+    native: watchList,
+  },
+  goerli: {
+    tokens: [
+      {
+        address: "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
+        name: "USD Coin",
+        symbol: "USD",
+        watchList: watchList,
+      },
+    ],
+    native: watchList,
+  },
+} as WalletCfig;
